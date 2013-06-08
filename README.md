@@ -125,8 +125,8 @@ Calls with no arguments are equivalent to calling with one undefined argument.
 
 ```js
 var f = Kurry.mono(2, function () {
-    return arguments
-})
+    return arguments;
+});
 
 f(1)(2)             == [1, 2]
 f(1, 2)(3, 4)       == [1, 3]
@@ -140,8 +140,8 @@ Wrapper around `Kurry.mono`.  Fills in the exact argument count to be the number
 
 ```js
 var f = Kurry.automono(function (x, y) {
-    return arguments
-})
+    return arguments;
+});
 
 f(1)(2)             == [1, 2]
 f(1, 2)(3, 4)       == [1, 3]
