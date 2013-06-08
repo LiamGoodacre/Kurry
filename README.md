@@ -119,7 +119,7 @@ Only the first argument to each call of the resulting function are accepted as v
 
 Given an exact argument count (`n`), and a function (`f`) to curry/uncurry, it produces a new function (`f'`).
 
-When function `f'` is called the first argument accepted and another function is returned.  This process repeats `n` times.  Once the last argument has been provided, `f` is called with exactly `n` arguments.
+When function `f'` is called, the first argument is accepted and another function is returned.  This process repeats `n` times.  Once the final argument has been provided, `f` is applied with exactly `n` arguments.
 
 Calls with no arguments are equivalent to calling with one undefined argument.
 
