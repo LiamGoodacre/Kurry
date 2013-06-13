@@ -27,7 +27,7 @@ It is incorrect for `n` to exceed the number of named arguments.
 
 ```js
 var f = Kurry.poly(4, function (a, b) {
-    return function () {
+    return function (c, d) {
         return [a, b].concat([].slice.call(arguments));
     };
 });
