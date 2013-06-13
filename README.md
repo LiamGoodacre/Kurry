@@ -56,7 +56,7 @@ This is a wrapper around `Kurry.poly`.  The first argument passed to `Kurry.poly
 
 ```js
 var f = Kurry.autopoly(function (a, b, c) {
-    return arguments;
+    return [].slice.call(arguments);
 });
 
 f(1, 2, 3)    == [1, 2, 3]
@@ -85,7 +85,7 @@ Calls with no arguments are equivalent to calling with one undefined argument.
 
 ```js
 var f = Kurry.vari(2, function () {
-    return arguments;
+    return [].slice.call(arguments);
 });
 
 f(2, 3)    == [2, 3]
@@ -102,7 +102,7 @@ Wrapper around `Kurry.vari`, fills in the minimum argument count to be the numbe
 
 ```js
 var f = Kurry.autovari(function (a, b) {
-    return arguments;
+    return [].slice.call(arguments);
 });
 
 f(2, 3)    == [2, 3]
@@ -125,7 +125,7 @@ Calls with no arguments are equivalent to calling with one undefined argument.
 
 ```js
 var f = Kurry.mono(2, function () {
-    return arguments;
+    return [].slice.call(arguments);
 });
 
 f(1)(2)             == [1, 2]
@@ -140,7 +140,7 @@ Wrapper around `Kurry.mono`.  Fills in the exact argument count to be the number
 
 ```js
 var f = Kurry.automono(function (x, y) {
-    return arguments;
+    return [].slice.call(arguments);
 });
 
 f(1)(2)             == [1, 2]
