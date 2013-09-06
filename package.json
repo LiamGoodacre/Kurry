@@ -1,5 +1,5 @@
 {
-    "name": "Kurry",
+    "name": "kurry",
     "description": "A small collection of currying/uncurrying functions",
     "main": "./kurry.js",
     "author": "Liam Goodacre",
