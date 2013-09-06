@@ -1,4 +1,4 @@
-# Kurry.js
+# Kurry.js [0.0.1]
 
 Kurry.js is a JavaScript library providing a small collection of functions that allow various forms of currying/uncurrying.  The main idea is to produce functions that can be used as both curried and uncurried functions.
 
@@ -9,6 +9,15 @@ So a function `f` of two arguments could be applied in multiple ways, here are t
 > In mathematics and computer science, currying is the technique of transforming a function that takes multiple arguments (or a tuple of arguments) in such a way that it can be called as a chain of functions, each with a single argument (partial application).
 
 > Uncurrying is the dual transformation to currying, and can be seen as a form of defunctionalization. It takes a function f(x) which returns another function g(y) as a result, and yields a new function f′(x,y) which takes a number of additional parameters and applies them to the function returned by function f. The process can be iterated if necessary.
+
+
+# npm
+
+Now available on npm:
+
+```
+npm install kurry
+```
 
 
 # Documentation
