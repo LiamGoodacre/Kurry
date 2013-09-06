@@ -1,0 +1,20 @@
+{
+    "name": "Kurry",
+    "description": "A small collection of currying/uncurrying functions",
+    "main": "./kurry.js",
+    "author": "Liam Goodacre",
+    "version": "0.0.1",
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/LiamGoodacre/Kurry.git"
+    },
+    "bugs" : {
+        "url" : "https://github.com/LiamGoodacre/Kurry/issues"
+    },
+    "licenses" : [
+        {
+            "type" : "MIT",
+            "url" : "https://github.com/LiamGoodacre/Kurry/raw/master/LICENSE.txt"
+        }
+    ]
+}
