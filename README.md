@@ -22,9 +22,11 @@ npm install kurry
 
 # Documentation
 
-### Kurry.poly(`exact argument count`, `function`) &rarr; `function`
+### Kurry.mix(`exact argument count`, `function`) &rarr; `function`
 
-Given an exact argument count (`n`), and a function (`f`) to curry/uncurry, it produces a new function (`f'`).
+Also called `poly`
+
+Given an exact argument count (`n`), and a function (`f`) to curry/uncurry, it produces a new function (`f'`) said to be in a mixcurried state.
 
 When function `f'` is called and the number of arguments provided match or exceed the required amount, then function `f` will be called with the number of named arguments `f` specifies.  If `f` requires less arguments than `n` and returns a function, then that function will be called, and we continue on in such a fashion until `n` arguments have been used up.
 
@@ -35,7 +37,7 @@ Calls with no arguments are equivalent to calling with one undefined argument.
 It is incorrect for `n` to exceed the number of named arguments.
 
 ```js
-var f = Kurry.poly(4, function (a, b) {
+var f = Kurry.mix(4, function (a, b) {
     return function (c, d) {
         return [a, b].concat([].slice.call(arguments));
     };
@@ -59,12 +61,14 @@ f(1)()(3, 4)     == [1, undefined, 3, 4]
 ```
 
 
-### Kurry.autopoly(`function`) &rarr; `function`
+### Kurry.automix(`function`) &rarr; `function`
 
-This is a wrapper around `Kurry.poly`.  The first argument passed to `Kurry.poly` is the number of named arguments in the top-level function passed in.
+Also called `autopoly`.
+
+This is a wrapper around `Kurry.mix`.  The first argument passed to `Kurry.mix` is the number of named arguments in the top-level function passed in.
 
 ```js
-var f = Kurry.autopoly(function (a, b, c) {
+var f = Kurry.automix(function (a, b, c) {
     return [].slice.call(arguments);
 });
 

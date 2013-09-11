@@ -70,7 +70,7 @@
 		});
 
 		/* local namespace */
-		return {
+		var api = {
 			vari: poly(2, vari),
 			autovari: automaker(vari),
 			poly: poly(2, poly),
@@ -80,6 +80,12 @@
 			automaker: poly(2, automaker),
 			Kurrier: Kurrier
 		};
+
+		/* aliases */
+		api.mix = api.poly;
+		api.automix = api.autopoly;
+
+		return api;
 	});
 
 })(typeof define == "function" ? define : typeof exports == "object" ? function(f) {
